@@ -3,8 +3,9 @@ import { useWebRTC } from './hooks/useWebRTC';
 import { VideoContainer } from './components/VideoContainer';
 import { Play, Square, MessageSquare } from 'lucide-react';
 
-// Use localhost for dev, but this should be env var
-const SERVER_URL = "http://localhost:3000";
+// Use environment variable for server URL
+const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:3000";
+
 
 function App() {
   const {
