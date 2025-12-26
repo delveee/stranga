@@ -1,19 +1,16 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
     --glass-bg: rgba(255, 255, 255, 0.1);
     --glass-border: rgba(255, 255, 255, 0.2);
   }
-}
 
-:root {
-  --glass-bg: rgba(255, 255, 255, 0.1);
-  --glass-border: rgba(255, 255, 255, 0.2);
-}
-
-body {
-  @apply bg-zinc-950 text-white overflow-hidden;
+  body {
+    @apply bg-zinc-950 text-white overflow-hidden;
+  }
 }
 
 .glass {
