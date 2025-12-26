@@ -1,15 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
+@media (prefers-color-scheme: dark) {
   :root {
     --glass-bg: rgba(255, 255, 255, 0.1);
     --glass-border: rgba(255, 255, 255, 0.2);
   }
-  body {
-    @apply bg-zinc-950 text-white overflow-hidden;
-  }
+}
+
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+body {
+  @apply bg-zinc-950 text-white overflow-hidden;
 }
 
 .glass {
@@ -23,10 +27,13 @@
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
     box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
   }
+
   50% {
     opacity: .5;
     box-shadow: 0 0 25px rgba(59, 130, 246, 0.8);
